@@ -12,6 +12,7 @@ int main()
     srand(time(NULL));      //to generate random number on each run
     int randNum = rand() % 101;
     int num;
+    int tries = 0;
     
     cout << "\n---------------------*  NUMBER GUESS GAME  *---------------------\n";
     cout << "\n Instructions:  Guess the number between the range 0-100\n";
@@ -23,14 +24,22 @@ int main()
         
         cout<<"\n - Enter your guess =  ";
         num = numCheck(num);
+
+        ++tries;
         
-        if (num > randNum) cout << "\n  \t Too high, guess lower\n";
-        else if (num<randNum) cout <<"\n  \t Too low, try a little higher\n";
-        else {
-            cout<<"\n\n \t\t*****  CORRECT! *****\n     CONGRATULATIONS! YOU GUESSED THE NUMBER! :D\n";
+        if (num > randNum) 
+            cout << "\n  \t Too high, guess lower\n";
+            
+        else if (num<randNum) 
+            cout <<"\n  \t Too low, try a little higher\n";
+            
+        else 
+        {
+            cout<<"\n\n \t\t*****  CORRECT! *****\n     CONGRATULATIONS! YOU GUESSED THE NUMBER IN "<<tries<<" ATTEMPTS! :D\n";
             break;
         }
     }
+    
     cout << "\n \t\tThe number was  '" << randNum << "'\n\n\n";
 
     for (int i = 0; i < 66; i++)cout << "-";
