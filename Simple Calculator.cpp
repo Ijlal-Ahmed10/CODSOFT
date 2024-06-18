@@ -1,12 +1,9 @@
 #include <iostream>
 using namespace std;
 
-
 double& numCheck(double&);      
 
 char& operatorCheck(char& op);     
-
-
 
 int main()
 {
@@ -61,12 +58,8 @@ int main()
     for (int i = 0; i < 66; i++)cout << "-";
     cout << "\n";
 
-
     return 0;
 }
-
-
-
 
 double& numCheck(double& x)
 {
