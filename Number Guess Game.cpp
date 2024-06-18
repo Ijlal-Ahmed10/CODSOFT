@@ -1,11 +1,7 @@
-
 #include <iostream>
-
 using namespace std;
 
-
 int& numCheck(int&);
-
 
 int main()
 {
@@ -16,12 +12,10 @@ int main()
     
     cout << "\n---------------------*  NUMBER GUESS GAME  *---------------------\n";
     cout << "\n Instructions:  Guess the number between the range 0-100\n";
-
    
     while (true)
     {
-        
-        
+                
         cout<<"\n - Enter your guess =  ";
         num = numCheck(num);
 
@@ -42,12 +36,11 @@ int main()
     
     cout << "\n \t\tThe number was  '" << randNum << "'\n\n\n";
 
-    for (int i = 0; i < 66; i++)cout << "-";
+    for (int i = 0; i < 66; i++) cout << "-";
     cout << "\n\n\n";
 
     return 0;
 }
-
 
 int& numCheck(int& n)
 {
