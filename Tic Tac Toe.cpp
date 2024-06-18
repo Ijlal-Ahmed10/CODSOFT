@@ -17,7 +17,6 @@ char& y_n_input(char&);
 void displayResults();
 void clearBoard();
 
-
 int main()
 {
 	char rematch = 'y';
@@ -68,16 +67,10 @@ int main()
 	return 0;
 } 
 
-
-
-
-
-
 bool isBoxEmpty(int r, int c)
 {
 	return (board[r][c] != 'X' && board[r][c] != 'O');
 }
-
 
 int& playerInput(int& n)
 {
@@ -99,7 +92,6 @@ int& playerInput(int& n)
 	return n;
 }
 
-
 void displayBoard()
 {
 	system("cls");
@@ -118,12 +110,10 @@ void displayBoard()
 	cout << "\n Instructions: To choose a box, you must choose the number written on it\n\n";
 }
 
-
 void playerTurn()
 {
 	int choice;
 	int row = NULL, col = NULL;
-
 	
 	if (turn == 'X')
 		cout << "\n\t * " << p1 << "'s turn  ( X ) *\n";
@@ -181,7 +171,6 @@ void playerTurn()
 	}
 	}
 
-
 	if (isBoxEmpty(row, col))
 	{
 		if (turn == 'X')
@@ -205,7 +194,6 @@ void playerTurn()
 	displayBoard();
 }
 
-
 bool endGame()
 {
 	for (int i = 0; i < 3; i++)
@@ -224,7 +212,6 @@ bool endGame()
 	return true;
 }
 
-
 char& y_n_input(char& ch)
 {
 	cin >> ch;
@@ -237,7 +224,6 @@ char& y_n_input(char& ch)
 	return ch;
 }
 
-
 void displayResults()
 {
 	system("cls");
@@ -247,7 +233,6 @@ void displayResults()
 	cout << "\n - " << p1 << ": " << p1_winCount << "\n";
 	cout << "\n - " << p2 << ": " << p2_winCount << "\n";
 }
-
 
 void clearBoard()
 {
